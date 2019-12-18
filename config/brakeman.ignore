@@ -1,0 +1,26 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "File Access",
+      "warning_code": 16,
+      "fingerprint": "7557516dd583b8dc101cc391191d426336d057152d124f371e65f53df4515f90",
+      "check_name": "FileAccess",
+      "message": "Parameter value used in file name",
+      "file": "app/controllers/api/v1/mini_magick_controller.rb",
+      "line": 26,
+      "link": "https://brakemanscanner.org/docs/warning_types/file_access/",
+      "code": "File.open(params[:image])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Api::V1::MiniMagickController",
+        "method": "image"
+      },
+      "user_input": "params[:image]",
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2019-12-18 10:41:30 +0600",
+  "brakeman_version": "4.7.2"
+}
