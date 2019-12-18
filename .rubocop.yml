@@ -1,0 +1,104 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.5.3
+  Exclude:
+    - db/**/*
+    - script/**/*
+    - bin/**/*
+    - vendor/**/*
+    - docker/**/*
+    - tmp/**/*
+    - docker/**/*
+    - spec/fixtures/**/*
+    - config/**/*
+    - ./Gemfile
+    - ./Rakefile
+    - ./config.ru
+    - ./node_modules/**/*
+
+Metrics/AbcSize:
+  Max: 25
+  Exclude:
+
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# URISchemes: http, https
+Metrics/LineLength:
+  Max: 120
+
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 15
+  Exclude:
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Blacklist:
+    - decrement!
+    - decrement_counter
+    - increment!
+    - increment_counter
+    - toggle!
+    - touch
+    - update_attribute
+    - update_column
+    - update_counters
+
+# Configuration parameters: CountComments, ExcludedMethods.
+Metrics/BlockLength:
+  Max: 60
+  Exclude:
+    - '**/*_spec.rb'
+    - 'spec/factories/*.rb'
+    - 'spec/support/shared_examples/**.rb'
+
+Metrics/ClassLength:
+  Exclude:
+
+Metrics/ModuleLength:
+  Exclude:
+
+Style/StructInheritance:
+  Exclude:
+
+Style/RedundantBegin:
+  Exclude:
+
+Metrics/ParameterLists:
+  Exclude:
+    - '**/*_spec.rb'
+
+Rails/LexicallyScopedActionFilter:
+  Exclude:
+
+Rails/UniqBeforePluck:
+  Exclude:
+
+Style/BlockDelimiters:
+  Exclude:
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Style/MutableConstant:
+  Exclude:
+
+Style/RedundantSelf:
+  Exclude:
+
+Lint/UriEscapeUnescape:
+  Exclude:
+
+Security/Open:
+  Exclude:
